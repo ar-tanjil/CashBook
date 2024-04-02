@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuTransaction"
+        android:title="Trans"
+        android:icon="@drawable/transection"
+        />
+
+    <item
+        android:id="@+id/menuStats"
+        android:title="Stats"
+        android:icon="@drawable/transection"
+        />
+
+    <item
+        android:id="@+id/menuAccounts"
+        android:title="Accounts"
+        android:icon="@drawable/transection"
+        />
+
+    <item
+        android:id="@+id/menuMore"
+        android:title="More"
+        android:icon="@drawable/transection"
+        />
+</menu>

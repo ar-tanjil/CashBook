@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.activities.MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolBarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llDatePicker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#304FFE"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBarHeader">
+
+        <ImageView
+            android:id="@+id/leftArrow"
+            android:layout_width="20sp"
+            android:layout_height="26sp"
+            android:rotation="180"
+            app:srcCompat="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="May - 25 - 2024"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/rightArrow"
+            android:layout_width="20sp"
+            android:layout_height="26sp"
+            app:srcCompat="@drawable/arrow" />
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#C51162"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llDatePicker"
+        app:tabMode="scrollable"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily" />
+
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monthly" />
+
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calender"
+            />
+
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summary"
+          />
+
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/incomeHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Income"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/income"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="#00C853"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/expenseHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Expense"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/expense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#D50000"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/totalHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Total"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00B8D4"
+        android:paddingBottom="0dp"
+        app:itemActiveIndicatorStyle="@style/App.CustomBottom"
+        app:itemIconSize="25sp"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bootm_menu" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatBtnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/plus" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactionList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:listitem="@layout/row_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

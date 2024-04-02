@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CashBookProject" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">#0091EA</item>
+    </style>
+
+    <style name="Theme.CashBookProject" parent="Base.Theme.CashBookProject" />
+
+    <style name="App.CustomBottom" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+
+        <item name="android:color">#C51162</item>
+
+    </style>
+
+</resources>
