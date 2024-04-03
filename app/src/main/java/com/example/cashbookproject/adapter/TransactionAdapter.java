@@ -11,19 +11,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.cashbookproject.R;
 import com.example.cashbookproject.databinding.RowLayoutBinding;
 import com.example.cashbookproject.models.Category;
-import com.example.cashbookproject.models.Transaction;
+import com.example.cashbookproject.models.TransactionModel;
 import com.example.cashbookproject.util.Constants;
 import com.example.cashbookproject.util.Helper;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder> {
 
     Context context;
-    ArrayList<Transaction> arrayList;
+    ArrayList<TransactionModel> arrayList;
 
-    public TransactionAdapter(Context context, ArrayList<Transaction> arrayList) {
+    public TransactionAdapter(Context context, ArrayList<TransactionModel> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
     }
@@ -38,7 +37,7 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
     @Override
     public void onBindViewHolder(@NonNull TransactionViewHolder holder, int position) {
 
-        Transaction transaction = arrayList.get(position);
+        TransactionModel transaction = arrayList.get(position);
 
         holder.binding.rowAmount.setText(
                 String.valueOf(transaction.getAmount())

@@ -14,13 +14,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.cashbookproject.R;
 import com.example.cashbookproject.adapter.TransactionAdapter;
 import com.example.cashbookproject.databinding.ActivityMainBinding;
-import com.example.cashbookproject.models.Transaction;
+import com.example.cashbookproject.models.TransactionModel;
 import com.example.cashbookproject.util.Constants;
 import com.example.cashbookproject.util.Helper;
 import com.example.cashbookproject.views.fragment.AddTransactionFragment;
 
-import java.lang.reflect.Array;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -73,15 +71,15 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
-        ArrayList<Transaction> transactions = new ArrayList<>();
+        ArrayList<TransactionModel> transactions = new ArrayList<>();
         transactions.add(
-                new Transaction(1l, "Income", "Business", "Cash", "Why",  new Date(), 500)
+                new TransactionModel(1l, "Income", "Business", "Cash", "Why",  new Date(), 500)
         );
         transactions.add(
-                new Transaction(2l, "Income", "Business", "Cash", "Why",  new Date(), 500)
+                new TransactionModel(2l, "Income", "Business", "Cash", "Why",  new Date(), 500)
         );
         transactions.add(
-                new Transaction(3l, "Expense", "Salary", "Bank", "Why",  new Date(), 500)
+                new TransactionModel(3l, "Expense", "Salary", "Bank", "Why",  new Date(), 500)
         );
 
         TransactionAdapter adapter = new TransactionAdapter(this, transactions);

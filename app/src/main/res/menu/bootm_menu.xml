@@ -10,18 +10,18 @@
     <item
         android:id="@+id/menuStats"
         android:title="Stats"
-        android:icon="@drawable/transection"
+        android:icon="@drawable/stats"
         />
 
     <item
         android:id="@+id/menuAccounts"
         android:title="Accounts"
-        android:icon="@drawable/transection"
+        android:icon="@drawable/accounts"
         />
 
     <item
         android:id="@+id/menuMore"
         android:title="More"
-        android:icon="@drawable/transection"
+        android:icon="@drawable/more"
         />
 </menu>

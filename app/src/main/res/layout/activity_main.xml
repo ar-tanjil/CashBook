@@ -11,18 +11,19 @@
         android:id="@+id/toolBarHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/titleBar"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white" />
 
     <LinearLayout
         android:id="@+id/llDatePicker"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#304FFE"
+        android:background="@color/dateBar"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="10dp"
@@ -58,12 +59,12 @@
         android:id="@+id/tabLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#C51162"
+        android:background="@color/tabBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/llDatePicker"
         app:tabMode="scrollable"
-        app:tabTextColor="@color/white">
+        app:tabTextColor="@color/black">
 
         <com.google.android.material.tabs.TabItem
 
@@ -81,15 +82,13 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calender"
-            />
+            android:text="Calender" />
 
         <com.google.android.material.tabs.TabItem
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Summary"
-          />
+            android:text="Summary" />
 
         <com.google.android.material.tabs.TabItem
 
@@ -185,11 +184,11 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00B8D4"
+        android:background="@color/bottomBar"
         android:paddingBottom="0dp"
         app:itemActiveIndicatorStyle="@style/App.CustomBottom"
-        app:itemIconSize="25sp"
-        app:labelVisibilityMode="labeled"
+        app:itemIconSize="30sp"
+        app:labelVisibilityMode="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

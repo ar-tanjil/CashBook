@@ -1,18 +1,41 @@
 package com.example.cashbookproject.models;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
 import java.util.Date;
 
-public class Transaction {
+@Entity(tableName = "transaction_model")
+public class TransactionModel {
 
+    @PrimaryKey(autoGenerate = true)
     private Long id;
-    private String type, category, account, note;
+
+    @ColumnInfo(name = "type")
+    private String type;
+
+    @ColumnInfo(name = "category")
+    private String category;
+
+    @ColumnInfo(name = "account")
+    private String account;
+
+    @ColumnInfo(name = "note")
+    private String note;
+
+    @ColumnInfo(name = "date")
     private Date date;
+
+    @ColumnInfo(name = "amount")
     private double amount;
 
-    public Transaction() {
+    @Ignore
+    public TransactionModel() {
     }
 
-    public Transaction(Long id, String type, String category, String account, String note, Date date, double amount) {
+    public TransactionModel(Long id, String type, String category, String account, String note, Date date, double amount) {
         this.id = id;
         this.type = type;
         this.category = category;

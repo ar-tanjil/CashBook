@@ -2,8 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="red">#D50000</color>
-    <color name="green">#00C853</color>
+    <color name="red">#800000</color>
+    <color name="green">#150080</color>
 
 
     <color name="defaultBtn">#3F3535</color>
@@ -11,9 +11,24 @@
     <color name="expenseBtn">#981818</color>
 
 
-    <color name="categoryOne">#FF6D00</color>
-    <color name="categoryTwo">#C51162</color>
-    <color name="categoryThree">#00B8D4</color>
+    <color name="business">#4DFF1745</color>
+    <color name="salary">#4D20C997</color>
+    <color name="food">#4D329AF0</color>
+    <color name="rent">#4DFCC419</color>
+    <color name="gift">#4DCC5DE8</color>
+    <color name="investment">#4D04BBC4</color>
+    <color name="other">#4D5104C4</color>
+    <color name="tax">#4D7D0202</color>
+
+
+
+
+    <color name="titleBar">#1d3557</color>
+    <color name="dateBar">#457b9d</color>
+    <color name="tabBar">#f1faee</color>
+    <color name="bottomBar">#a8dadc</color>
+    <color name="bottomIcon">#e63946</color>
+
 
 
 

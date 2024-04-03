@@ -9,7 +9,7 @@
 
     <style name="App.CustomBottom" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
 
-        <item name="android:color">#C51162</item>
+        <item name="android:color">#f1faee</item>
 
     </style>
 

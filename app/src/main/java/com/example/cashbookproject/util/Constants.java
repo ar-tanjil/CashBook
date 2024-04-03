@@ -14,9 +14,14 @@ public class Constants {
 
     public static void setCategories() {
         categories = new ArrayList<>();
-        categories.add(new Category("Salary", R.drawable.arrow, R.color.categoryOne));
-        categories.add(new Category("Business", R.drawable.arrow, R.color.categoryTwo));
-        categories.add(new Category("Invenstment", R.drawable.arrow, R.color.categoryThree));
+        categories.add(new Category("Salary", R.drawable.salary, R.color.salary));
+        categories.add(new Category("Business", R.drawable.business, R.color.business));
+        categories.add(new Category("Investment", R.drawable.investment, R.color.investment));
+        categories.add(new Category("Gift", R.drawable.gift, R.color.gift));
+        categories.add(new Category("Food", R.drawable.food, R.color.food));
+        categories.add(new Category("Rent", R.drawable.rent, R.color.rent));
+        categories.add(new Category("Tax", R.drawable.tax, R.color.tax));
+        categories.add(new Category("Other", R.drawable.other, R.color.other));
     }
 
     public static Category getCategoryDetails(String name) {
@@ -34,11 +39,11 @@ public class Constants {
     public static int getAccountColor(String name) {
         switch (name) {
             case "Bank":
-                return R.color.categoryOne;
+                return R.color.red;
             case "Cash":
-                return R.color.categoryTwo;
+                return R.color.green;
             default:
-                return R.color.categoryThree;
+                return R.color.other;
         }
     }
 

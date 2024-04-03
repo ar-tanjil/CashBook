@@ -8,15 +8,14 @@
 
     <ImageView
         android:id="@+id/row_icon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:background="@drawable/category_icon"
-        android:padding="5dp"
-        android:src="@drawable/favorite"
+        android:padding="8dp"
+        android:src="@drawable/business"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="#FEFCFD" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
