@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 import java.util.Date;
 
 @Entity(tableName = "transaction_model")
-public class TransactionModel {
+public class Transaction {
 
     @PrimaryKey(autoGenerate = true)
     private Long id;
@@ -32,11 +32,21 @@ public class TransactionModel {
     private double amount;
 
     @Ignore
-    public TransactionModel() {
+    public Transaction() {
     }
 
-    public TransactionModel(Long id, String type, String category, String account, String note, Date date, double amount) {
+    public Transaction(Long id, String type, String category, String account, String note, Date date, double amount) {
         this.id = id;
+        this.type = type;
+        this.category = category;
+        this.account = account;
+        this.note = note;
+        this.date = date;
+        this.amount = amount;
+    }
+
+    @Ignore
+    public Transaction(String type, String category, String account, String note, Date date, double amount) {
         this.type = type;
         this.category = category;
         this.account = account;
@@ -99,5 +109,18 @@ public class TransactionModel {
 
     public void setAmount(double amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "id=" + id +
+                ", type='" + type + '\'' +
+                ", category='" + category + '\'' +
+                ", account='" + account + '\'' +
+                ", note='" + note + '\'' +
+                ", date=" + date +
+                ", amount=" + amount +
+                '}';
     }
 }

@@ -43,4 +43,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation("androidx.room:room-runtime:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")
+    implementation ("com.github.AnyChart:AnyChart-Android:1.1.5")
 }

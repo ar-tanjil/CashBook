@@ -6,23 +6,40 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.cashbookproject.models.TransactionModel;
+import com.example.cashbookproject.models.Transaction;
 
+import java.util.Date;
 import java.util.List;
 
 @Dao
 public interface TransactionDao {
 
     @Query("select * from transaction_model")
-    List<TransactionModel> getAll();
+    List<Transaction> getAll();
+
+    @Query("SELECT * FROM transaction_model WHERE date >= :start And date <= :end ")
+    public List<Transaction> getAllByDate(Date start, Date end);
+
+    @Query("SELECT * FROM transaction_model WHERE date >= :start And date <= :end And type = :type ")
+    public List<Transaction> getAllByDateAndCategory(Date start, Date end, String type );
+
+
+    @Query("SELECT sum(amount) FROM transaction_model WHERE date >= :start And date <= :end and type = 'Income' ")
+    public double getIncomeByDate(Date start, Date end);
+
+    @Query("SELECT sum(amount) FROM transaction_model WHERE date >= :start And date <= :end and type = 'Expense' ")
+    public double getExpenseByDate(Date start, Date end);
+
+    @Query("SELECT sum(amount) FROM transaction_model WHERE date >= :start And date <= :end ")
+    public double getTotalByDate(Date start, Date end);
 
     @Insert
-    void add(TransactionModel transactionModel);
+    void add(Transaction transaction);
 
     @Update
-    void update(TransactionModel transactionModel);
+    void update(Transaction transaction);
 
     @Delete
-    void delete(TransactionModel transactionModel);
+    void delete(Transaction transaction);
 
 }

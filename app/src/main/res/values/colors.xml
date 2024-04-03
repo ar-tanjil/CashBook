@@ -6,19 +6,29 @@
     <color name="green">#150080</color>
 
 
+
+    <color name="card">#C51162</color>
+    <color name="cash">#2962FF</color>
+    <color name="bank">#DD2C00</color>
+    <color name="otherAccount">#FFAB00</color>
+
+
+
+
+
     <color name="defaultBtn">#3F3535</color>
     <color name="incomeBtn">#1648D2</color>
     <color name="expenseBtn">#981818</color>
 
 
-    <color name="business">#4DFF1745</color>
-    <color name="salary">#4D20C997</color>
-    <color name="food">#4D329AF0</color>
-    <color name="rent">#4DFCC419</color>
-    <color name="gift">#4DCC5DE8</color>
-    <color name="investment">#4D04BBC4</color>
-    <color name="other">#4D5104C4</color>
-    <color name="tax">#4D7D0202</color>
+    <color name="business">#80FF1745</color>
+    <color name="salary">#8020C997</color>
+    <color name="food">#80329AF0</color>
+    <color name="rent">#80FCC419</color>
+    <color name="gift">#80CC5DE8</color>
+    <color name="investment">#8004BBC4</color>
+    <color name="other">#805104C4</color>
+    <color name="tax">#807D0202</color>
 
 
 

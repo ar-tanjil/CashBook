@@ -1,14 +1,27 @@
 package com.example.cashbookproject.util;
 
 import com.example.cashbookproject.R;
+import com.example.cashbookproject.models.Account;
 import com.example.cashbookproject.models.Category;
 
 import java.util.ArrayList;
 
 public class Constants {
 
-    public static String INCOME = "INCOME";
-    public static String EXPENSE = "EXPENSE";
+    public static String INCOME = "Income";
+    public static String EXPENSE = "Expense";
+
+    public static int DAILY = 0;
+    public static int MONTHLY = 1;
+    public static int CALENDER = 2;
+    public static int SUMMARY = 3;
+    public static int NOTE = 4;
+    public static int SELECTED_TAB = 0;
+    public static int SELECTED_STATS = 0;
+    public static String SELECTED_STATS_TYPE = Constants.INCOME;
+
+
+
 
     public static ArrayList<Category> categories;
 
@@ -36,14 +49,29 @@ public class Constants {
     }
 
 
+    public static ArrayList<Account> accountsLabel;
+
+    public static void setAccountLabel() {
+        accountsLabel = new ArrayList<>();
+
+        accountsLabel.add(new Account(500, "Cash"));
+        accountsLabel.add(new Account(0, "Bank"));
+        accountsLabel.add(new Account(0, "Card"));
+        accountsLabel.add(new Account(0, "Other"));
+
+    }
+
+
     public static int getAccountColor(String name) {
         switch (name) {
             case "Bank":
-                return R.color.red;
+                return R.color.bank;
             case "Cash":
-                return R.color.green;
+                return R.color.cash;
+            case "Card":
+                return R.color.card;
             default:
-                return R.color.other;
+                return R.color.otherAccount;
         }
     }
 

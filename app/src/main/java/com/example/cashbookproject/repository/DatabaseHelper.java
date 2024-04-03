@@ -7,9 +7,9 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-import com.example.cashbookproject.models.TransactionModel;
+import com.example.cashbookproject.models.Transaction;
 
-@Database(entities = {TransactionModel.class}, exportSchema = false, version = 1)
+@Database(entities = {Transaction.class}, exportSchema = false, version = 1)
 @TypeConverters(Converters.class)
 public abstract class DatabaseHelper extends RoomDatabase {
 
