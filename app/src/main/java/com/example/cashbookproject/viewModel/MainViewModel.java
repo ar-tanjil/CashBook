@@ -21,6 +21,9 @@ public class MainViewModel extends AndroidViewModel {
    public MutableLiveData<List<Transaction>> transactionList = new MutableLiveData<>();
    public MutableLiveData<List<Transaction>> categoryTransaction = new MutableLiveData<>();
 
+   public MutableLiveData<List<Transaction>> allTransaction = new MutableLiveData<>();
+
+
    public MutableLiveData<Double> totalIncome = new MutableLiveData<>();
    public MutableLiveData<Double> totalExpense = new MutableLiveData<>();
    public MutableLiveData<Double> totalAmount = new MutableLiveData<>();
@@ -34,6 +37,16 @@ public class MainViewModel extends AndroidViewModel {
         database = DatabaseHelper.getDb(application);
 
     }
+
+    public void getTransaction(){
+
+            List<Transaction> transactions = database.transactionDao()
+                    .getAll();
+
+            allTransaction.setValue(transactions);
+
+    }
+
 
 
 

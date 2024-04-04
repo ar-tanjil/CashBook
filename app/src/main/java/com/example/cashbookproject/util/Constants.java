@@ -61,6 +61,19 @@ public class Constants {
 
     }
 
+    public static int getAccountImage(String name){
+        switch (name) {
+            case "Bank":
+                return R.drawable.banck_account;
+            case "Cash":
+                return R.drawable.cash_account;
+            case "Card":
+                return R.drawable.card_account;
+            default:
+                return R.drawable.other_account;
+        }
+    }
+
 
     public static int getAccountColor(String name) {
         switch (name) {

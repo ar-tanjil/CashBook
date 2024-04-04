@@ -25,6 +25,7 @@ import com.example.cashbookproject.repository.DatabaseHelper;
 import com.example.cashbookproject.util.Constants;
 import com.example.cashbookproject.util.Helper;
 import com.example.cashbookproject.viewModel.MainViewModel;
+import com.example.cashbookproject.views.fragment.AccountFragment;
 import com.example.cashbookproject.views.fragment.AddTransactionFragment;
 import com.example.cashbookproject.views.fragment.StatsFragment;
 import com.example.cashbookproject.views.fragment.TransactionFragment;
@@ -83,7 +84,11 @@ public class MainActivity extends AppCompatActivity {
                         } else if (menuItem.getItemId() == R.id.menuStats) {
                             transaction.replace(R.id.transContent, new StatsFragment());
                             getSupportActionBar().setTitle("Stats");
+                        } else if (menuItem.getItemId() == R.id.menuAccounts) {
+                            transaction.replace(R.id.transContent, new AccountFragment());
+                            getSupportActionBar().setTitle("Account");
                         }
+
                         transaction.commit();
                         return  true;
                     }

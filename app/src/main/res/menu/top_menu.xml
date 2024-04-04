@@ -4,9 +4,10 @@
 
     <item
         android:id="@+id/top_bar_search"
-        android:icon="@drawable/search"
         android:title="Search"
         app:actionViewClass="android.widget.SearchView"
+        app:searchHintIcon="@drawable/search"
+        app:searchIcon="@drawable/search"
         app:showAsAction="always"/>
     <item
         android:id="@+id/top_bar_favorite"
